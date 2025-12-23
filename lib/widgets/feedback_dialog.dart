@@ -339,18 +339,11 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
             Flexible(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
-                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
                 child: _isSubmitted
                     ? _buildSuccessState(config, styles)
                     : _buildFormContent(config, styles),
               ),
             ),
-            /*SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: _isSubmitted
-                  ? _buildSuccessState(config, styles)
-                  : _buildFormContent(config, styles),
-            ),*/
             // Adding some bottom padding for the scrollable content, especially before the buttons
             const SizedBox(height: 24.0),
           ],
